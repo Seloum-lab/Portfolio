@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Carousel from '../components/Carousel.astro';
+
+const heroData = {title: "Portfolio", nextPage: {path: "education.html", title: "Education"}};
+
+const portfolio = [
+	{title: "Project1", desc:" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ducimus in est minus! Laboriosam quaerat exercitationem facilis nostrum hic quos aut nihil modi cum, atque, qui culpa saepe suscipit nobis excepturi consequatur? Saepe consequatur ratione incidunt dolor, vero soluta reprehenderit voluptate architecto dignissimos, et quibusdam. Rem sunt pariatur voluptatem laboriosam, incidunt maiores nam ratione nostrum laborum facere aspernatur officiis! Quaerat laudantium repellat impedit velit natus, assumenda sequi adipisci, eius, reiciendis enim quisquam autem tempore! Quos totam, maxime inventore voluptate quae, quisquam doloremque placeat exercitationem repellat animi, minus cum quia consectetur vero nobis! Dolores distinctio soluta quod perspiciatis assumenda, quaerat deserunt eos magnam molestias earum, suscipit porro. Sit, molestiae voluptate. Eligendi sed eos dicta quaerat atque. Iusto dolorum molestiae tempore cum debitis ipsum fugit, dicta molestias dolores nihil quia minus facilis aut possimus, alias, at eligendi ullam totam cupiditate velit quaerat sint corrupti architecto! Incidunt, praesentium? Facilis ipsum quod minima fugit saepe hic deleniti labore reprehenderit corrupti voluptate adipisci sunt assumenda, magnam maiores numquam quisquam dicta. Laudantium doloribus tempore recusandae eaque vitae ipsam magni velit nobis. Debitis unde perferendis veniam tempora, officiis sit voluptate? Ratione rem labore quas temporibus, eum voluptas officiis veritatis vel ex reprehenderit quis dolorum veniam provident nostrum! elit. Eos cupiditate aut similique voluptatum dolorum! Ab dolorem sequi tempora enim adipisci! Aliquam ea dolorem odio itaque. Nam blanditiis magnam quod eligendi.", id : 'portfolio1', content: [''], img_path: 'C_logo.png'},
+	{title: "Project2", desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cupiditate aut similique voluptatum dolorum! Ab dolorem sequi tempora enim adipisci! Aliquam ea dolorem odio itaque. Nam blanditiis magnam quod eligendi.", id : 'portfolio2', content: [''], img_path: 'C_logo.png'},
+	{title: "Project3", desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cupiditate aut similique voluptatum dolorum! Ab dolorem sequi tempora enim adipisci! Aliquam ea dolorem odio itaque. Nam blanditiis magnam quod eligendi.", id : 'portfolio3', content: [''], img_path: 'C_logo.png'},
+];
+
+
+
+---
+<script>
+    const activePage = document.getElementById("portfolio");
+    activePage?.setAttribute('class', 'block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500');
+    activePage?.setAttribute("aria-current" ,"page");
+</script>
+
+<Layout>
+	<Hero title={heroData.title} nextPage={heroData.nextPage}/>
+	<Carousel cards={portfolio}/>
+</Layout>
+ 

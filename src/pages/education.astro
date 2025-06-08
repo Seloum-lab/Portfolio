@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Timeline from "../components/Timeline.astro";
+import Hero from "../components/Hero.astro";
+
+const heroData = {title: "Education", nextPage: {path: "career.html", title: "Career"}};
+
+
+const unis = [
+    {date : "September 2025", title : "INSA Lyon", desc : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam perspiciatis iste obcaecati provident, consequuntur quasi aliquam, veniam, assumenda sapiente debitis impedit amet! Autem quibusdam illo quia nobis quae placeat beatae.", website: "zejnciz.com"},
+    {date : "September 2025", title : "INSA Lyon", desc : "Description of INSA Lyon", website: "zejnciz.com"},
+    {date : "September 2025", title : "INSA Lyon", desc : "Description of INSA Lyon", website: "zejnciz.com"},
+];
+---
+
+
+<script>
+    const activePage = document.getElementById("education");
+    activePage?.setAttribute('class', 'block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500');
+    activePage?.setAttribute("aria-current" ,"page");
+</script>
+
+<Layout>
+    <Hero title={heroData.title} nextPage={heroData.nextPage}/>
+    <div class="flex flex-row min-h-screen justify-center items-center">
+        <Timeline events={unis}/>
+    </div>
+</Layout>
