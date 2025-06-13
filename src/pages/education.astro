@@ -7,9 +7,30 @@ const heroData = {title: "Education", nextPage: {path: "career.html", title: "Ca
 
 
 const unis = [
-    {date : "September 2025", title : "INSA Lyon", desc : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam perspiciatis iste obcaecati provident, consequuntur quasi aliquam, veniam, assumenda sapiente debitis impedit amet! Autem quibusdam illo quia nobis quae placeat beatae.", website: "zejnciz.com"},
-    {date : "September 2025", title : "INSA Lyon", desc : "Description of INSA Lyon", website: "zejnciz.com"},
-    {date : "September 2025", title : "INSA Lyon", desc : "Description of INSA Lyon", website: "zejnciz.com"},
+    {
+        date : "September 2018 - June 2021",
+        title : "Lycée Pierre Mendès France",
+        desc : "International French highschool of Tunis. I obtained a baccalaureate with maths, physics and chemistry as majors. the diploma was obtained with highest honours and congratulations of the jury",
+        website : "https://www.ert.tn/pmf/",
+    },
+    {
+        date : "September 2021 - June 2023",
+        title : "INSA Lyon - Engineering Preparatory Level in European Section",
+        desc : "During these two years, the education was focused on a high-level scientific and humanistic culture, especially the european one.",
+        website: "https://www.insa-lyon.fr/en/node/1944",
+    },
+    {
+        date : "September 2023 - June 2024 then February 2025 - May 2025",
+        title : "INSA Lyon - Computer Science Department",
+        desc : "Emphasis on fundamental techniques, tools, and methodologiesduring first year then focus on design and integration, tackling more complex challenges for the second year",
+        website: "https://if.insa-lyon.fr/en",
+    },
+    {
+        date : "August 2024 - December 2024",
+        title : "UANL FIME - Software Technology Engineering",
+        desc : "Academic exchange, part of the INSA formation. During this semester, I focused on the managment aspect of projects.",
+        website: "https://www.uanl.mx/en/oferta/bachelor-of-software-technology-engineering/",
+    },
 ];
 ---
 
@@ -23,6 +44,6 @@ const unis = [
 <Layout>
     <Hero title={heroData.title} nextPage={heroData.nextPage}/>
     <div class="flex flex-row min-h-screen justify-center items-center">
-        <Timeline events={unis}/>
+        <Timeline events={unis.reverse()}/>
     </div>
 </Layout>

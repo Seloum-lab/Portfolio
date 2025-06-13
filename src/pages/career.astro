@@ -4,8 +4,18 @@ import Timeline from "../components/Timeline.astro";
 import Hero from "../components/Hero.astro";
 
 const unis = [
-    {date : "September 2025", title : "Internship ", desc : "Description of internship", website: "zejnciz.com"},
-    {date : "September 2025", title : "Junior SWE", desc : "Description of INSA Lyon"},
+    {
+        date : "July 2024",
+        title : "Web Developer Intern at Wevioo Tunis",
+        desc : "Developed a lightweight JavaScript component framework using Bootstrap to streamline the creation of landing pages for no-code applications built with Joget.",
+        website: "https://www.wevioo.com/en"
+    },
+    {
+        date : "June 2025 - September 2025",
+        title : "Software Engineer Intern at Microsoft Dublin",
+        desc : "Currently going through the onboarding since the internship just started",
+        website : "https://www.microsoft.com/en-ie/aboutireland",
+    },
 ];
 
 
@@ -21,5 +31,5 @@ const heroData = {title: "Career"};
 
 <Layout>
     <Hero title={heroData.title} />
-    <Timeline events={unis}/>
+    <Timeline events={unis.reverse()}/>
 </Layout>

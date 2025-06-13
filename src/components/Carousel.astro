@@ -5,7 +5,7 @@ import Modal from "./Modal.astro";
 
 
 interface Props {
-	cards: {title: string, desc: string, id: string, content: string[], img_path: string}[];
+	cards: {title: string, id: string, content: string[], img_path: string, technos: string[], tools: string[]}[];
 };
 
 const { cards } = Astro.props;
@@ -17,13 +17,13 @@ const { cards } = Astro.props;
         <main id="slider-container" class="relative w-full h-[400px] sm:h-[380px] md:h-[360px] [perspective:1200px]">
         {cards.map((card) => (
           <article class="slide absolute inset-0 p-0 m-0">
-            <Card toggle={card.id} title={card.title} desc={card.desc} img_path={card.img_path} class="w-full"></Card>
+            <Card toggle={card.id} title={card.title} desc={card.content[0]} img_path={card.img_path} class="w-full"></Card>
           </article>
         ))}
         </main>
 
         {cards.map((card) => (
-          <Modal id={card.id} title={card.title} content={card.content}/>
+          <Modal id={card.id} title={card.title} content={card.content}, technos={card.technos} tools={card.tools}/>
         ))}
 
         <button id="prevButton" title="Previous testimonial" class="dark:bg-gray-800 absolute top-1/2 left-[-16px] sm:left-[-24px] md:left-[-30px] transform -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white focus:bg-white flex items-center justify-center text-stone-500 hover:text-stone-700 focus:text-stone-700 focus:outline-none transition-all duration-200">

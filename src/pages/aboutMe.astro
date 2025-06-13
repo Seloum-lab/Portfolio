@@ -2,7 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 
 const name = "Selim Ben Bouzid";
-const introduction = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae esse aliquam nihil ad omnis unde hic, nostrum veniam excepturi commodi veritatis, tempora ea eos, mollitia cupiditate itaque facilis nulla iure."
+const introduction = [
+    "I am a 22 years old French and Tunisian student. I lived my first 18 years in Tunisia and then went to France where I studied engineering at INSA Lyon. I loved this career and learned a lot, and I made the choice to specialize in Computer Science Engineering. What I love in this path itd very specific way of thinking, the fact that there is so much to learn and that you can still constantly improve yourself. I would not consider myself an expert in any CS field, but rather a student eager to learn even more and apply what he have learnt for problem solving.",
+    "Beside from the educational aspect, I love to travel and discover new countries and cultures, especially for long duratino as I did for my academic exchange and for an internship. Beside from the educational aspect, I love to travel and discover new countries and cultures, especially for long duratino as I did for my academic exchange and for an internship. I love sports and I played handball since I was 12 years old, and more recently I discovered the gym and just fell in love with it. I also love music since I play the guitar! I also love playing chess.",
+    "Finally, I would say my biggest strenghts (beside from the hardskills) are teamwork, organization, discipline and perseverence",
+];  
+
+
 const email = "benbouzid.selim@gmail.com";
 const phonePrefix = "+33";
 const phoneNumber = "7 603 888 13";
@@ -20,12 +26,16 @@ const linkedIn = "selim-ben-bouzid";
     <div class="flex flex-row items-center justify-between w-full max-w-7xl mx-auto px-8 py-12">
         <!-- Texte à gauche -->
         <div class="max-w-xl">
-            <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
+            <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-[75px]">
                 {name}
             </h1>
-            <p class="text-lg lg:text-xl text-gray-500 dark:text-gray-400">
-                {introduction}
-            </p>
+            {introduction.map((paragraph) => (
+                <p class="text-lg lg:text-xl text-gray-500 dark:text-gray-400 mb-4">
+                    {paragraph}
+                    <br/>
+                </p>
+            ))}
+            
         </div>
 
         <!-- Image à droite avec infos de contact -->
