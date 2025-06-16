@@ -1,60 +1,52 @@
----
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Carousel from '../components/Carousel.astro';
+<html lang="en">
+  <head>
+    <meta http-equiv="refresh" content="0; URL=/Portfolio/Portfolio" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+	
+	<div class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+		<div role="status" class="flex flex-col items-center justify-center">
+			<svg
+			aria-hidden="true"
+			class="w-16 h-16 text-gray-300 animate-spin dark:text-gray-700 fill-blue-600 dark:fill-blue-400"
+			viewBox="0 0 100 101"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			>
+			<path
+				d="M100 50.5908C100 78.2051 77.6142 100.591 
+				50 100.591C22.3858 100.591 0 78.2051 
+				0 50.5908C0 22.9766 22.3858 0.59082 
+				50 0.59082C77.6142 0.59082 100 22.9766 
+				100 50.5908ZM9.08144 50.5908C9.08144 73.1895 
+				27.4013 91.5094 50 91.5094C72.5987 91.5094 
+				90.9186 73.1895 90.9186 50.5908C90.9186 
+				27.9921 72.5987 9.67226 50 9.67226C27.4013 
+				9.67226 9.08144 27.9921 9.08144 50.5908Z"
+				fill="currentColor"
+			/>
+			<path
+				d="M93.9676 39.0409C96.393 38.4038 97.8624 
+				35.9116 97.0079 33.5539C95.2932 28.8227 
+				92.871 24.3692 89.8167 20.348C85.8452 
+				15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 
+				4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 
+				0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 
+				1.69328 37.813 4.19778 38.4501 6.62326C39.0873 
+				9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 
+				9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 
+				10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 
+				17.9648 79.3347 21.5619 82.5849 25.841C84.9175 
+				28.9121 86.7997 32.2913 88.1811 35.8758C89.083 
+				38.2158 91.5421 39.6781 93.9676 39.0409Z"
+				fill="currentFill"
+			/>
+			</svg>
+			<span class="sr-only">Loading...</span>
+		</div>
+		</div>
 
-const heroData = {title: "Portfolio", nextPage: {path: "education.html", title: "Education"}};
 
-const portfolio = [
-	{
-		title: "Building a C compiler",
-		id : 'portfolio1',
-		content: [
-			'This school consisted in designing and implementing a functional C compiler that supports a subset of the C language features',
-			'The project was developed C++ and relied on the framework ANTLR4. It was a team project, ours was composed of 6. The work was shared between us and each one was the \'expert\' in on feature. I was in charge to implement the function related features (definition, call, passing parameters, ...).'
-		],
-		img_path: 'C_logo.png',
-		technos: ['C++', 'ANTLR4'],
-		tools: ['Git']
-	},
-	{
-		title: "WeOut -- Phone Web App",
-		id : 'portfolio2',
-		content: [
-			'During this project, we had to think of, design and implement from scratch, in only 2 weeks. The only restriction was that the project had to be related with Computer Science',
-			'We chose to implement a social media that aimed to ease the access to night life. The goal was basically to allow people to see where entourage goes out, to share your experiences going out, to have a live rating of the events, to have recommendations over the events around you and have an interactive map to localize them.',
-			'The team was composed of 8 members, and we made two groups. 4 focused on the front-end while the other 4 on the back-end. I was part of the back-end team.'
-		],
-		img_path: 'we-out-logo-pink.png',
-		technos: ['React', 'TypeScript', 'Prisma'],
-		tools: ['Git', 'Docker']
-	},
-	{
-		title: "Web App",
-		id : 'portfolio3',
-		content: [
-			'This shcool project was our first introduction to full-stack development, we had to develop and do all the work in pair. The project was divided in two parts.',
-			'The first part consisted of desining the backend and the HMI (mocks of what the front should look). We had to implement the backend and to make its spec.',
-			'For the second part, we were given the backend and the spec of another pair, and we then had to implement the front end that relied on calls to the back.',
-			'The technos used were imposed. A Java project for the backend without any framework that was linked to the database with JPA. For the front-end, just HTML/CSS/JS with Java Servlets.'
-		],
-		img_path: 'internet-logo.png',
-		technos: ['HTML', 'CSS', 'JavaScript', 'Java', 'JPA'],
-		tools: ['Git']
-	},
-];
-
-
-
----
-<script>
-    const activePage = document.getElementById("portfolio");
-    activePage?.setAttribute('class', 'block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500');
-    activePage?.setAttribute("aria-current" ,"page");
-</script>
-
-<Layout>
-	<Hero title={heroData.title} nextPage={heroData.nextPage}/>
-	<Carousel cards={portfolio}/>
-</Layout>
- 
+  </body>
+</html>

@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Carousel from '../../components/Carousel.astro';
+
+const heroData = {title: "Portfolio", nextPage: {path: "education", title: "Education"}};
+
+const portfolio = [
+	{
+		title: "Building a C compiler",
+		id : 'portfolio1',
+		content: [
+			'This school consisted in designing and implementing a functional C compiler that supports a subset of the C language features',
+			'The project was developed C++ and relied on the framework ANTLR4. It was a team project, ours was composed of 6. The work was shared between us and each one was the \'expert\' in on feature. I was in charge to implement the function related features (definition, call, passing parameters, ...).'
+		],
+		img_path: 'C_logo.png',
+		technos: ['C++', 'ANTLR4'],
+		tools: ['Git']
+	},
+	{
+		title: "WeOut -- Phone Web App",
+		id : 'portfolio2',
+		content: [
+			'During this project, we had to think of, design and implement from scratch, in only 2 weeks. The only restriction was that the project had to be related with Computer Science',
+			'We chose to implement a social media that aimed to ease the access to night life. The goal was basically to allow people to see where entourage goes out, to share your experiences going out, to have a live rating of the events, to have recommendations over the events around you and have an interactive map to localize them.',
+			'The team was composed of 8 members, and we made two groups. 4 focused on the front-end while the other 4 on the back-end. I was part of the back-end team.'
+		],
+		img_path: 'we-out-logo-pink.png',
+		technos: ['React', 'TypeScript', 'Prisma'],
+		tools: ['Git', 'Docker']
+	},
+	{
+		title: "Web App",
+		id : 'portfolio3',
+		content: [
+			'This shcool project was our first introduction to full-stack development, we had to develop and do all the work in pair. The project was divided in two parts.',
+			'The first part consisted of desining the backend and the HMI (mocks of what the front should look). We had to implement the backend and to make its spec.',
+			'For the second part, we were given the backend and the spec of another pair, and we then had to implement the front end that relied on calls to the back.',
+			'The technos used were imposed. A Java project for the backend without any framework that was linked to the database with JPA. For the front-end, just HTML/CSS/JS with Java Servlets.'
+		],
+		img_path: 'internet-logo.png',
+		technos: ['HTML', 'CSS', 'JavaScript', 'Java', 'JPA'],
+		tools: ['Git']
+	},
+];
+
+
+
+---
+<script>
+    const activePage = document.getElementById("portfolio");
+    activePage?.setAttribute('class', 'block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500');
+    activePage?.setAttribute("aria-current" ,"page");
+</script>
+
+<Layout>
+	<Hero title={heroData.title} nextPage={heroData.nextPage}/>
+	<Carousel cards={portfolio}/>
+</Layout>
+ 
