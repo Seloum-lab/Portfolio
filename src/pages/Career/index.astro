@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Timeline from "../../components/Timeline.astro";
 import Hero from "../../components/Hero.astro";
 
-const unis = [
+const experiences = [
     {
         date : "July 2024",
         title : "Web Developer Intern at Wevioo - Tunis Tunisia",
@@ -15,6 +15,12 @@ const unis = [
         title : "Software Engineer Intern at Microsoft - Dublin Ireland",
         desc : "Led the development of a new upsell page in the Office redemption flow  (React, TypeScript, C#, .NET) used daily by hundreds of thousands of users worldwide. Handled full-stack implementation, UX integration, and service-layer logic. Owned all cross-functional communication: legal reviews, privacy compliance, UX validation, and product alignment. Pushed code to production, contributing to improved conversion and user engagement.",
         website : "https://www.microsoft.com/en-ie/aboutireland",
+    },
+    {
+        date : "February 2026 - July 2026",
+        title : "Software Engineer Intern at Mistral AI - Paris France",
+        desc : "Current role",
+        website : "https://mistral.ai",
     },
 ];
 
@@ -31,5 +37,5 @@ const heroData = {title: "Career"};
 
 <Layout>
     <Hero title={heroData.title} />
-    <Timeline events={unis.reverse()}/>
+    <Timeline events={experiences.reverse()}/>
 </Layout>
