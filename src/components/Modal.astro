@@ -50,8 +50,8 @@ const {id, title, content, technos, tools} = Astro.props;
                         Technologies used in the project:
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        {technos.map((tech) => (
-                            tech + ', '
+                        {technos.map((tech, index) => (
+                            tech + (index !== technos.length - 1 ? ', ' : '')
                         ))}
                     </p>
                 </div>
@@ -61,8 +61,8 @@ const {id, title, content, technos, tools} = Astro.props;
                         Tools used in the project:
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        {tools.map((tool) => (
-                            tool + ', '
+                        {tools.map((tool, index) => (
+                            tool + (index !== tools.length - 1 ? ', ' : '')
                         ))}
                     </p>
                 </div>
